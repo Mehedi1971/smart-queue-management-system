@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/api/queue-management/branch")
 public class BranchController {
-    private BranchService branchService;
+    private final BranchService branchService;
 
     @PostMapping
     public Response createBranch(@RequestBody BranchDto branchDto){
